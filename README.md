@@ -95,7 +95,7 @@ ios-authentication-showcase
 └── Tests/
     └── LoginViewModelTests.swift
 
-Security
+## Security
 This repository does not contain:
 Production credentials
 Real passwords
@@ -105,7 +105,9 @@ Private certificates
 Client-specific information
 Confidential application data
 Authentication tokens are demonstrated using Keychain rather than storing sensitive data in UserDefaults.
-Error Handling
+
+
+## Error Handling
 The authentication flow demonstrates centralized handling for common network conditions such as:
 Invalid URL
 Invalid response
@@ -113,12 +115,15 @@ Unauthorized request
 Server errors
 Decoding failures
 Network connectivity issues
-Testing
+
+
+## Testing
 The authentication layer is designed to be testable using:
 Protocol-based dependencies
 Mock services
 Dependency injection
 XCTest
-Purpose
+
+## Purpose
 This repository demonstrates practical iOS development practices for implementing a structured, maintainable, testable, and secure authentication flow.
-The implementation is intended for technical showcase purposes and does not contain production or client-specific code.
+The implementation is intended for technical showcase purposes and does not contain production or client-specific code. 
