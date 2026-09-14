@@ -1,4 +1,4 @@
-# iOS Authentication 
+# iOS Authentication Showcase
 
 A native iOS technical showcase demonstrating clean and secure authentication implementation using Swift.
 
@@ -80,92 +80,34 @@ The project demonstrates secure handling of authentication credentials and token
 * Sensitive information is not stored in UserDefaults.
 * No production credentials or API keys are included.
 * No client-specific or confidential information is included.
-* Demo authentication data is used for showcase
-- Logout functionality
-- Authentication state management
-- Codable request and response models
-- Async/Await networking
-- Protocol-based service abstraction
-- Dependency injection
-- Centralized network error handling
-- MVVM architecture
-- Unit testing with mock services
-
-## Authentication Flow
-
-1. User enters username and password.
-2. Login request is sent to the authentication API.
-3. Server validates the credentials.
-4. Authentication token is returned.
-5. Token is securely stored in Keychain.
-6. Token can be used for authenticated API requests.
-7. Logout removes the stored authentication token.
-
-## Project Structure
-
-```text
-ios-authentication-showcase
-│
-├── README.md
-├── .gitignore
-│
-├── Models/
-│   ├── LoginRequest.swift
-│   ├── LoginResponse.swift
-│   └── User.swift
-│
-├── Network/
-│   ├── APIClient.swift
-│   ├── APIEndpoint.swift
-│   └── NetworkError.swift
-│
-├── Services/
-│   ├── AuthenticationService.swift
-│   └── AuthenticationServiceProtocol.swift
-│
-├── Security/
-│   └── KeychainManager.swift
-│
-├── ViewModels/
-│   ├── LoginViewModel.swift
-│   └── AuthenticationState.swift
-│
-├── Views/
-│   └── LoginViewController.swift
-│
-└── Tests/
-    └── LoginViewModelTests.swift
-
-
-## Security
-This repository does not contain:
-Production credentials
-Real passwords
-API keys
-Access tokens
-Private certificates
-Client-specific information
-Confidential application data
-Authentication tokens are demonstrated using Keychain rather than storing sensitive data in UserDefaults.
-
+* Demo authentication data is used for showcase purposes.
 
 ## Error Handling
-The authentication flow demonstrates centralized handling for common network conditions such as:
-Invalid URL
-Invalid response
-Unauthorized request
-Server errors
-Decoding failures
-Network connectivity issues
 
+The authentication layer provides centralized handling for common API and networking errors, including:
+
+* Invalid URL
+* Invalid server response
+* Unauthorized requests
+* Server errors
+* Decoding errors
+* Network connectivity issues
 
 ## Testing
-The authentication layer is designed to be testable using:
-Protocol-based dependencies
-Mock services
-Dependency injection
-XCTest
+
+The authentication components are designed for testability using:
+
+* Protocol-based dependencies
+* Dependency injection
+* Mock services
+* XCTest
 
 ## Purpose
-This repository demonstrates practical iOS development practices for implementing a structured, maintainable, testable, and secure authentication flow.
-The implementation is intended for technical showcase purposes and does not contain production or client-specific code. 
+
+This project demonstrates practical iOS development practices for implementing a structured, maintainable, testable, and secure authentication flow.
+
+The repository is created for technical showcase purposes and does not contain production or client-specific code.
+
+## API
+
+The sample implementation uses a demo REST API for authentication and does not contain any confidential credentials or client information.
