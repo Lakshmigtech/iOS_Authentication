@@ -115,3 +115,20 @@ final class APIClient: APIClientProtocol {
         }
     }
 }
+
+private struct AnyEncodable: Encodable {
+
+    private let encodeClosure: (Encoder) throws -> Void
+
+    init(_ value: Encodable) {
+
+        encodeClosure = value.encode
+    }
+
+    func encode(
+        to encoder: Encoder
+    ) throws {
+
+        try encodeClosure(encoder)
+    }
+}
