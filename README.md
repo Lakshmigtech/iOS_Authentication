@@ -1,45 +1,86 @@
-# iOS_Authentication
+# iOS Authentication 
 
-Native iOS authentication showcase using Swift, MVVM, URLSession, Keychain, and token-based authentication.
+A native iOS technical showcase demonstrating clean and secure authentication implementation using Swift.
 
 ## Technologies
 
-- Swift
-- UIKit
-- MVVM
-- URLSession
-- Codable
-- Async/Await
-- Keychain
-- Protocol-Oriented Programming
-- Dependency Injection
-- REST API
-- XCTest
+* Swift
+* UIKit
+* MVVM
+* URLSession
+* Codable
+* Async/Await
+* Keychain
+* Protocol-Oriented Programming
+* Dependency Injection
+* REST API
+* XCTest
 
 ## Architecture
 
 The project follows a simple layered architecture:
 
+```text
 ViewController
-↓
+      ↓
 ViewModel
-↓
+      ↓
 Authentication Service
-↓
+      ↓
 API Client
-↓
+      ↓
 URLSession
-↓
+      ↓
 REST API
+```
 
-Security-sensitive data is handled separately using Keychain.
+Security-sensitive authentication data is handled separately using Keychain.
 
 ## Key Implementations
 
-- Login API integration
-- Token-based authentication
-- Bearer token handling
-- Secure token storage using Keychain
+* Login API integration
+* Token-based authentication
+* Bearer token handling
+* Secure token storage using Keychain
+* Logout functionality
+* Authentication state management
+* Codable-based request and response models
+* Async/Await networking
+* Protocol-based service abstraction
+* Dependency injection
+* Centralized network error handling
+* MVVM architecture
+* Unit testing with mock services
+
+## Authentication Flow
+
+```text
+User Login
+    ↓
+LoginViewController
+    ↓
+LoginViewModel
+    ↓
+AuthenticationService
+    ↓
+APIClient
+    ↓
+REST API
+    ↓
+Authentication Response
+    ↓
+Store Token in Keychain
+```
+
+## Security
+
+The project demonstrates secure handling of authentication credentials and tokens.
+
+* Authentication tokens are stored securely using Keychain.
+* Sensitive information is not stored in UserDefaults.
+* No production credentials or API keys are included.
+* No client-specific or confidential information is included.
+* Demo authentication data is used for showcase
 - Logout functionality
 - Authentication state management
 - Codable request and response models
